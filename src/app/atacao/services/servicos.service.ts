@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { AtacaoHome } from './../shared/atacao-home';
 import { Iatacao } from './../../model/atacao';
 
@@ -10,7 +11,7 @@ import { Observable, EMPTY, map, catchError, pipe, take, delay } from 'rxjs';
   providedIn: 'root',
 })
 export class ServicosService {
-  private API: string = 'https://api-teka.herokuapp.com/atacao';
+  private API: string = environment.URL;
   private APIHOME: string = '/api/home';
 
   constructor(private http: HttpClient, private toastr: ToastrService) {}
