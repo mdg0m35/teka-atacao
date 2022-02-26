@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  URL:'https://api-teka.herokuapp.com/atacao'
+
 };
