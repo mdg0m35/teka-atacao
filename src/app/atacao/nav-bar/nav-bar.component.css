@@ -1,0 +1,53 @@
+.navbar{
+  background-image: linear-gradient(to left, rgb(14, 14, 196), rgb(255, 255, 255));
+}
+.nav-link{
+
+    color:white!important;
+    position: relative;
+    float: right;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(9, 36, 155);
+    border-radius: 25px;
+
+}
+.nav-link:hover{
+
+  color:rgb(22, 35, 221)!important;
+  position: relative;
+  float: right;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(237, 238, 243);
+  border-radius: 20px;
+
+}
+
+
+@media screen and (max-width: 580px){
+  .nav-link{
+
+    color:white!important;
+    position: relative;
+    float: right;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(9, 36, 155);
+    border-radius: 25px;
+
+}
+.nav-link:hover{
+
+  color:rgb(22, 35, 221)!important;
+  position: relative;
+  float: right;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(237, 238, 243);
+  border-radius: 20px;
+
+}
+
+
+  }

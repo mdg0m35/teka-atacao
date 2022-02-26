@@ -1,0 +1,46 @@
+
+<div class="clear"></div>
+<div >
+<form [formGroup]="form" >
+<mat-card class="example-cardd" >
+
+
+
+
+
+            <h2 class="cad2">Cadastrar Maquinas</h2>
+
+            <label>Maquina </label>
+            <input type="number" class="form-control" id="valor" formControlName="idnumero" placeholder="Numero da Maquina">
+
+            <label>Tipo</label><br>
+             <input   type="radio" id="tipo" name="fav_language" formControlName="tipo"  value="Felpa" >
+               <label style="background-color: rgb(228, 208, 28); border-radius: 60px; right: 50px; width: 60px; align-items: center; text-align: center; color: rgb(31, 2, 2);">Felpa</label>
+               <input  type="radio" id="tipo" name="fav_language"  formControlName="tipo" value="Base" >
+               <label  style=" background-color: blue; border-radius: 50px; right: 20px; width: 60px; align-items: center; text-align: center; color: white;">Base</label><br>
+
+             <label>Data</label>
+            <input type="date" class="form-control" id="dataR"  formControlName="data" value=>
+
+    <div class="clear"></div>
+
+
+
+
+    <button type="button" class="btn btn-primary"(click)="onsubmitF()" >Cadastrar</button>
+
+
+
+
+  </mat-card>
+
+</form>
+
+
+</div>
+
+
+
+
+
+

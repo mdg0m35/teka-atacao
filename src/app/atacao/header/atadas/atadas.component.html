@@ -1,0 +1,80 @@
+<mat-card class="example-card">
+  <table class="table table-striped">
+    <thead>
+
+      <tr style="background-image: linear-gradient(to right, rgba(20, 20, 223, 0.767), rgba(255, 255, 255, 0.836));">
+
+        <th scope="col">ID</th>
+        <th scope="col"></th>
+        <th scope="col">Num</th>
+        <th scope="col"></th>
+       <!-- <th scope="col">Data</th>-->
+        <th scope="col">
+          <button style=" font-size: 10px; width: 78px;"type="button" class="btn btn-outline-primary" (click)="AttTab()"><i class="fa fa-spinner" style="font-size: 10px;" aria-hidden="true"></i> Atualizar</button>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let idAtacao of atacaoL">
+
+        <td class="idColor">{{ idAtacao._id }}</td>
+        <th scope="row">{{ idAtacao.maquina }}</th>
+        <td class="idColor">{{ idAtacao.idnumero }}</td>
+        <td>
+          <div
+            *ngIf="idAtacao.tipo === 'Felpa'; then thenBlock; else elseBlock"
+          ></div>
+          <ng-template #thenBlock>
+            <div
+              style="
+                background-color: rgb(238, 241, 4);
+                color: black;
+                border-radius: 50px;
+                right: 10px;
+                width: 50px;
+                align-items: center;
+                text-align: center;
+              "
+            >
+              {{ idAtacao.tipo }}
+            </div>
+          </ng-template>
+          <ng-template #elseBlock>
+            <div
+              style="
+                background-color: rgb(4, 40, 241);
+                color: rgb(255, 255, 255);
+                border-radius: 50px;
+                right: 10px;
+                width: 50px;
+                align-items: center;
+                text-align: center;
+              "
+            >
+              {{ idAtacao.tipo }}
+            </div>
+          </ng-template>
+        </td>
+         <!--<td class="idColor" id="data">{{ idAtacao.data }}</td>-->
+        <td>
+          <button style="float: right;"
+            type="button"
+            class="btn btn-danger"
+            (click)="deletar(idAtacao)"
+          >
+            Excluir
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #loading>
+    <div class="loading-spinner">
+      <div style="align-items: center">
+        <mat-spinner></mat-spinner>
+      </div>
+    </div>
+  </ng-template>
+</mat-card>
