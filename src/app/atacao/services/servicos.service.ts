@@ -1,5 +1,5 @@
 import { environment } from './../../../environments/environment';
-import { AtacaoHome } from './../shared/atacao-home';
+
 import { Iatacao } from './../../model/atacao';
 
 import { HttpClient } from '@angular/common/http';
@@ -11,7 +11,7 @@ import { Observable, EMPTY, map, catchError, pipe, take, delay } from 'rxjs';
   providedIn: 'root',
 })
 export class ServicosService {
-  private API: string = '/api/atacao';
+  private API: string = environment.API+'/api/atacao';
 
 
   constructor(private http: HttpClient, private toastr: ToastrService) {}
