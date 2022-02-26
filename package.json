@@ -3,16 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng start --proxy-config proxy.config.js ",
+    "start": "ng serve --proxy-config proxy.confi.js ",
     "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
 
-  "agines":{
-    "node" : "16.13.2",
-    "npm": "8.1.2"
-  },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.2.0",

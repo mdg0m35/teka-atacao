@@ -11,7 +11,7 @@ import { Observable, EMPTY, map, catchError, pipe, take, delay } from 'rxjs';
   providedIn: 'root',
 })
 export class ServicosService {
-  private API: string = '/atacao';
+  private API: string = '/api/atacao';
 
 
   constructor(private http: HttpClient, private toastr: ToastrService) {}
