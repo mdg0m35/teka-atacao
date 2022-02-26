@@ -10,7 +10,7 @@ import { Observable, EMPTY, map, catchError, pipe, take, delay } from 'rxjs';
   providedIn: 'root',
 })
 export class ServicosService {
-  private API: string = 'https://api-teka.herokuapp.com/';
+  private API: string = 'https://api-teka.herokuapp.com/atacao';
   private APIHOME: string = '/api/home';
 
   constructor(private http: HttpClient, private toastr: ToastrService) {}
