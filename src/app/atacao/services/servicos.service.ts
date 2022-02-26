@@ -11,8 +11,8 @@ import { Observable, EMPTY, map, catchError, pipe, take, delay } from 'rxjs';
   providedIn: 'root',
 })
 export class ServicosService {
-  private API: string = environment.URL;
-  private APIHOME: string = '/api/home';
+  private API: string = 'https://api-teka.herokuapp.com/atacao';
+
 
   constructor(private http: HttpClient, private toastr: ToastrService) {}
 
@@ -22,12 +22,7 @@ export class ServicosService {
       catchError((erro) => this.exibeErro(erro))
     );
   }
-  atadasHomeList(): Observable<AtacaoHome[]> {
-    return this.http.get<AtacaoHome[]>(this.APIHOME).pipe(
-      map((retorno) => retorno),
-      catchError((erro) => this.exibeErro(erro))
-    );
-  }
+
 
 
   exibeErro(e: any): Observable<any> {
