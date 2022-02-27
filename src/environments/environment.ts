@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  URL:'https://api-teka.herokuapp.com'
+  URL:'http://localhost:8080'
 
 };
 
