@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   URL:'http://localhost:8080/atacao',
-  URLCont :'http://localhost:8080/atacao/cont'
+
 
 };
 

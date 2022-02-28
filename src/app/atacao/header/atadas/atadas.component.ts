@@ -13,7 +13,7 @@ import { Iatacao } from 'src/app/model/atacao';
 })
 export class AtadasComponent implements OnInit {
   atacaoL: Iatacao[] = [];
-  qnt: any[]=[this.atadasServices.APICont]
+
 
 
 
@@ -35,11 +35,6 @@ export class AtadasComponent implements OnInit {
     })
   }
 
-  cont(cont: string){
-    this.atadasServices.ContList()
-    console.log(this.cont)
-    return cont
-  }
 
 
  deletar(atacao: Iatacao):void{

@@ -13,7 +13,7 @@ import { Observable, EMPTY, map, catchError, pipe, take, delay } from 'rxjs';
 })
 export class ServicosService {
   private API: string = environment.URL;
- public APICont: string =environment.URLCont;
+
 
 
   constructor(private http: HttpClient, private toastr: ToastrService) {}
@@ -26,10 +26,7 @@ export class ServicosService {
   }
 
 
-  ContList() {
-    this.http.get(this.APICont);
 
-  }
 
 
 
