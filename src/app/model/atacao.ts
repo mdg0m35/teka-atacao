@@ -1,4 +1,4 @@
-import { Data } from "@angular/router";
+
 
 export interface Iatacao{
 
@@ -6,6 +6,6 @@ export interface Iatacao{
     maquina: string,
     idnumero: string,
     tipo: string,
-    data: string
+    data: string,
 
 }

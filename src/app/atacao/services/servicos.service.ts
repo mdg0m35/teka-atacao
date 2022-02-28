@@ -7,11 +7,13 @@ import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Observable, EMPTY, map, catchError, pipe, take, delay } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root',
 })
 export class ServicosService {
-  private API: string = environment.URL+'/atacao';
+  private API: string = environment.URL;
+ public APICont: string =environment.URLCont;
 
 
   constructor(private http: HttpClient, private toastr: ToastrService) {}
@@ -22,6 +24,13 @@ export class ServicosService {
       catchError((erro) => this.exibeErro(erro))
     );
   }
+
+
+  ContList() {
+    this.http.get(this.APICont);
+
+  }
+
 
 
 

@@ -5,14 +5,17 @@ import { catchError, delay, Observable, of } from 'rxjs';
 import { Iatacao } from 'src/app/model/atacao';
 
 
+
 @Component({
   selector: 'app-atadas',
   templateUrl: './atadas.component.html',
   styleUrls: ['./atadas.component.css']
 })
 export class AtadasComponent implements OnInit {
-  atacaoL: Iatacao[] =[] ;
-  azulClass: boolean = false;
+  atacaoL: Iatacao[] = [];
+  qnt: any[]=[this.atadasServices.APICont]
+
+
 
 
   constructor(private atadasServices: ServicosService) {}
@@ -22,6 +25,8 @@ export class AtadasComponent implements OnInit {
     this.carregar();
 
 
+
+
   }
 
   carregar(){
@@ -29,6 +34,13 @@ export class AtadasComponent implements OnInit {
       this.atacaoL = retorno;
     })
   }
+
+  cont(cont: string){
+    this.atadasServices.ContList()
+    console.log(this.cont)
+    return cont
+  }
+
 
  deletar(atacao: Iatacao):void{
   this.atadasServices.excluir(atacao._id).subscribe(()=>{
