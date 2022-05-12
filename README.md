@@ -1,5 +1,8 @@
 # TekaAtacao
 
+https://teka-atacao.vercel.app/atadas
+Site desenvolvido  para cadastrar máquinas estão prontas na ataçao de uma indústria têxtil. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
 ## Development server
